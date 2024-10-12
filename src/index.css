@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .align-element {
+    @apply mx-auto max-w-7xl px-4 sm:px-8;
+  }
+}
+
+body {
+  font-family: "Roboto";
+}
+p {
+}
+.animation-container {
+  font-family: "Roboto";
+  text-transform: uppercase;
+}
+
+.animation {
+  height: 3rem;
+  overflow: hidden;
+  margin-left: 0.5rem;
+}
+
+.animation > div > div {
+  padding: 0 0.25rem;
+  height: 3rem;
+  letter-spacing: 2px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+.first div {
+  background-color: #20a7d8;
+}
+.second div {
+  background-color: #cd921e;
+}
+
+@keyframes text-animation {
+  0% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(-3rem);
+  }
+  50% {
+    transform: translateY(-3rem);
+  }
+  70% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Cursor */
+.cursor {
+  position: relative;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+/* Animation */
+.typewriter-animation {
+  animation: typewriter 5s steps(50) 3s 1 normal both;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+    border-right: none;
+  }
+}
