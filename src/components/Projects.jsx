@@ -1,4 +1,4 @@
-import ProjectsCard from "./ProjectsCard";
+import ProjectCard from "./ProjectCard";
 import SectionTitle from "./SectionTitle";
 import useFetchProjects from "../fetchProjects";
 
@@ -14,7 +14,7 @@ const Projects = () => {
       <SectionTitle text="web creations" />
       <div className="py-16 grid md:grid-cols-2 xl:grid-cols-3 gap-8  flex-row-reverse">
         {newProjects.map((project) => {
-          return <ProjectsCard key={project.id} {...project} />;
+          return <ProjectCard key={project.id} {...project} />;
         })}
       </div>
     </section>
