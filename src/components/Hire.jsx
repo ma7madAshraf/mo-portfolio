@@ -3,6 +3,7 @@ import aboutSvg from "../assets/contact_us.svg";
 import SectionTitle from "./SectionTitle";
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import resume from "../assets/files/myResume.pdf";
 const Hire = () => {
   return (
     <section className="mt-8 py-20 bg-base-100 align-element" id="about">
@@ -10,6 +11,17 @@ const Hire = () => {
       <div className=" grid  md:grid-cols-3 items-center gap-16">
         <img src={aboutSvg} className="w-full h-64  rounded-xl " />
         <article className="md:col-span-2">
+          <div className="flex justify-center items-center">
+            <a
+              href={resume}
+              download="resume.pdf"
+              className="btn btn-wide btn-primary text-lg font-semibold"
+            >
+              {" "}
+              Download CV{" "}
+            </a>
+          </div>
+
           <div className="flex gap-x-4 justify-center items-center mt-8 ">
             <a
               href="https://github.com/ma7madAshraf"
